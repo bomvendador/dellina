@@ -14,7 +14,7 @@ def dash_panel_login_view(request):
     return render(request, 'login.html', context)
 
 
-@login_required(redirect_field_name=None, login_url='/dash_panel')
+# @login_required(redirect_field_name=None, login_url='/dash_panel')
 def dash_panel_index_view(request):
     if request.method == 'POST':
         login_ = request.POST['login']
