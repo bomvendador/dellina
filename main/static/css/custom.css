@@ -1,0 +1,50 @@
+.font-roboto-300{
+    font-family: Roboto!important;
+    font-weight: 300!important;
+}
+
+.font-roboto-600{
+    font-family: Roboto!important;
+    font-weight: 600!important;
+}
+
+.font-size-59{
+    font-size: 59px!important;
+}
+
+.padding-8{
+    padding-top: 8px!important;
+    padding-bottom: 8px!important;
+}
+
+.font-size-25-imp{
+    font-size: 25px!important;
+}
+
+.margin-top-120{
+    margin-top: 120px;
+}
+
+.margin-top-100{
+    margin-top: 100px;
+}
+
+.padding-20-imp{
+    padding: 20px!important;
+}
+
+.height-90{
+    height: 90px;
+}
+
+.background-9a9a9a-imp{
+    background-color: #9a9a9a!important;
+}
+
+.padding-25-0{
+    padding: 25px 0;
+}
+
+.right-0-imp{
+    right: 0!important;
+}

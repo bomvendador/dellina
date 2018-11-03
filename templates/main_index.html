@@ -1,0 +1,861 @@
+{% extends 'base_fixed_header.html' %}
+{% load staticfiles %}
+
+
+{% block main_content %}
+
+<!-- Hero Background SlideShow -->
+<div id="hero-section" data-number="4" data-image-1="{% static 'img/slider/design3.jpg' %}" data-image-2="{% static 'img/slider/2.jpg' %}" data-image-3="{% static 'img/slider/electro.png' %}" data-image-4="{% static 'img/slider/build.jpg' %}" data-effect="fade">
+    <div class="hero-content">
+        <div class="hero-title scroll" data-min="28px" data-max="80px">
+            <h1>Проектирование</h1>
+            <h1>Монтаж</h1>
+            <h1>Реставрация</h1>
+        </div>
+
+        <div class="hero-text">
+            <p>Our experience ensures that your projects will be done right and with the upmost professionalism.</p>
+        </div>
+
+        <div class="hero-button">
+            <a class="wprt-button rounded-3px" href="#">LEARN MORE</a>
+        </div>
+    </div><!-- /.hero-content -->
+
+    <a class="arrow scroll-target" href="#services-section"></a><!-- change href value to ID of section you want to scroll down -->
+</div>
+
+{#<!-- Slider -->#}
+{#<div class="rev_slider_wrapper fullwidthbanner-container">#}
+{#    <div id="rev-slider1" class="rev_slider fullwidthabanner">#}
+{#        <ul>#}
+{#            <!-- Slide -->#}
+{#            <li data-transition="fade" data-slotamount="default" data-easein="Power3.easeInOut" data-easeout="Power3.easeInOut" data-masterspeed="1500" data-thumb="assets/img/slider/1.jpg" data-rotate="0" data-saveperformance="off" data-title="BEST COMPANY">#}
+{#                <!-- Main Image -->#}
+{#                <img src="{% static 'img/slider/1.jpg' %}" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-no-retina>#}
+{#                <!-- Layers -->#}
+{#                <div class="tp-caption tp-resizeme text-white font-family-extend letter-spacing-7px"#}
+{#                    data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"#}
+{#                    data-y="['middle','middle','middle','middle']" data-voffset="['-50','-50','-50','-50']"#}
+{#                    data-fontsize="['28','24','20','18']"#}
+{#                    data-lineheight="['40','36','28','26']"#}
+{#                    data-width="none"#}
+{#                    data-height="none"#}
+{#                    data-whitespace="nowrap"#}
+{#                    data-transform_idle="o:1;"#}
+{#                    data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;"#}
+{#                    data-transform_out="auto:auto;s:1000;e:Power3.easeInOut;"#}
+{#                    data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"#}
+{#                    data-mask_out="x:0;y:0;s:inherit;e:inherit;"#}
+{#                    data-start="1000"#}
+{#                    data-splitin="none"#}
+{#                    data-splitout="none"#}
+{#                    data-responsive_offset="on"#}
+{#                    data-lasttriggerstate="reset">#}
+{#                    <div class="font-roboto-300 font-size-20-imp">aaa</div>#}
+{##}
+{#                </div>#}
+{#                <div class="tp-caption tp-resizeme text-white font-family-heading letter-spacing-1px font-weight-700"#}
+{#                    data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"#}
+{#                    data-y="['middle','middle','middle','middle']" data-voffset="['26','20','16','10']"#}
+{#                    data-fontsize="['70','60','50','40']"#}
+{#                    data-lineheight="['80','70','60','50']"#}
+{#                    data-width="none"#}
+{#                    data-height="none"#}
+{#                    data-whitespace="nowrap"#}
+{#                    data-transform_idle="o:1;"#}
+{#                    data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;"#}
+{#                    data-transform_out="auto:auto;s:1000;e:Power3.easeInOut;"#}
+{#                    data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"#}
+{#                    data-mask_out="x:0;y:0;s:inherit;e:inherit;"#}
+{#                    data-start="1000"#}
+{#                    data-splitin="none"#}
+{#                    data-splitout="none"#}
+{#                    data-responsive_offset="on">#}
+{#                    <div class="font-roboto-600">#}
+{#                        <span class="text-accent-color font-size-59">bbb</span> ccc#}
+{##}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="tp-caption"#}
+{#                    data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"#}
+{#                    data-y="['middle','middle','middle','middle']" data-voffset="['156','136','116','106']"#}
+{#                    data-width="none"#}
+{#                    data-height="none"#}
+{#                    data-whitespace="nowrap"#}
+{#                    data-transform_idle="o:1;"#}
+{#                    data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;"#}
+{#                    data-style_hover="c:rgba(255, 255, 255, 1.00);bc:rgba(255, 255, 255, 1.00);cursor:pointer;"#}
+{#                    data-transform_in="y:50px;opacity:0;s:1500;e:Power4.easeInOut;"#}
+{#                    data-transform_out="y:[175%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"#}
+{#                    data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"#}
+{#                    data-start="1250"#}
+{#                    data-splitin="none"#}
+{#                    data-splitout="none"#}
+{#                    data-actions='[{"event":"click","action":"scrollbelow","offset":"20px"}]'#}
+{#                    data-responsive="on">#}
+{#                    <a class="wprt-button big rounded-3px">НАШИ ПРОЕКТЫ</a>#}
+{#                </div>#}
+{#            </li>#}
+{#            <!-- End Slide -->#}
+{##}
+{#            <!-- Slide -->#}
+{#            <li data-transition="boxfade" data-slotamount="7" data-easein="Expo.easeOut" data-easeout="Expo.easeOut" data-masterspeed="2000" data-thumb="assets/img/slider/2.jpg" data-rotate="0" data-saveperformance="off" data-title="SINCE 1981">#}
+{#                <!-- Main Image -->#}
+{#                <img src="{% static 'img/slider/2.jpg' %}" alt="" data-bgposition="center center" data-no-retina>#}
+{#                <!-- Layers -->#}
+{#                <div class="tp-caption tp-resizeme text-white font-family-heading letter-spacing-1px font-weight-700"#}
+{#                    data-x="['left','left','left','left']" data-hoffset="['50','30','30','30']"#}
+{#                    data-y="['middle','middle','middle','middle']" data-voffset="['-75','-70','-70','-50']"#}
+{#                    data-fontsize="['58','58','58','35']"#}
+{#                    data-lineheight="['66','65','56','42']"#}
+{#                    data-width="none"#}
+{#                    data-height="none"#}
+{#                    data-whitespace="nowrap"#}
+{#                    data-transform_idle="o:1;"#}
+{#                    data-transform_in="z:0;rX:0deg;rY:0;rZ:0;sX:1.5;sY:1.5;skX:0;skY:0;opacity:0;s:1500;e:Power3.easeInOut;"#}
+{#                    data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"#}
+{#                    data-mask_in="x:0px;y:0px;"#}
+{#                    data-mask_out="x:inherit;y:inherit;"#}
+{#                    data-start="1500"#}
+{#                    data-splitin="none"#}
+{#                    data-splitout="none"#}
+{#                    data-responsive_offset="on">#}
+{#                    <div class="font-roboto-300 font-size-25-imp">ddd</div>#}
+{#                </div>#}
+{#                <div class="tp-caption tp-resizeme text-white font-family-heading letter-spacing-1px font-weight-700"#}
+{#                    data-x="['left','left','left','left']" data-hoffset="['50','30','30','30']"#}
+{#                    data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"#}
+{#                    data-fontsize="['58','58','58','35']"#}
+{#                    data-lineheight="['66','65','56','42']"#}
+{#                    data-width="none"#}
+{#                    data-height="none"#}
+{#                    data-whitespace="nowrap"#}
+{#                    data-transform_idle="o:1;"#}
+{#                    data-transform_in="z:0;rX:0deg;rY:0;rZ:0;sX:1.5;sY:1.5;skX:0;skY:0;opacity:0;s:1500;e:Power3.easeInOut;"#}
+{#                    data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"#}
+{#                    data-mask_in="x:0px;y:0px;"#}
+{#                    data-mask_out="x:inherit;y:inherit;"#}
+{#                    data-start="1500"#}
+{#                    data-splitin="none"#}
+{#                    data-splitout="none"#}
+{#                    data-responsive_offset="on">#}
+{#                    <div class="font-roboto-300">eee</div><div class="font-roboto-300"><span class="text-accent-color">rrr</span></div>#}
+{#                </div>#}
+{#                <div class="tp-caption tp-resizeme text-white font-family-extend letter-spacing-4px"#}
+{#                    data-x="['left','left','left','left']" data-hoffset="['55','30','30','30']"#}
+{#                    data-y="['middle','middle','middle','middle']" data-voffset="['68','100','100','40']"#}
+{#                    data-fontsize="['28','26','24','15']"#}
+{#                    data-lineheight="['40','40','40','28']"#}
+{#                    data-width="none"#}
+{#                    data-height="none"#}
+{#                    data-whitespace="nowrap"#}
+{#                    data-transform_idle="o:1;"#}
+{#                    data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;"#}
+{#                    data-transform_out="auto:auto;s:1000;e:Power3.easeInOut;"#}
+{#                    data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"#}
+{#                    data-mask_out="x:0;y:0;s:inherit;e:inherit;"#}
+{#                    data-start="1000"#}
+{#                    data-splitin="none"#}
+{#                    data-splitout="none"#}
+{#                    data-responsive_offset="on"#}
+{#                    data-lasttriggerstate="reset">#}
+{#                    Fast and Reliable Service for Your Project#}
+{#                </div>#}
+{#                <div class="tp-caption"#}
+{#                    data-x="['left','left','left','left']" data-hoffset="['55','30','30','30']"#}
+{#                    data-y="['middle','middle','middle','middle']" data-voffset="['160','150','140','125']"#}
+{#                    data-width="none"#}
+{#                    data-height="none"#}
+{#                    data-whitespace="nowrap"#}
+{#                    data-transform_idle="o:1;"#}
+{#                    data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;"#}
+{#                    data-style_hover="c:rgba(255, 255, 255, 1.00);bc:rgba(255, 255, 255, 1.00);cursor:pointer;"#}
+{#                    data-transform_in="y:50px;opacity:0;s:1000;e:Power4.easeInOut;"#}
+{#                    data-transform_out="y:[175%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"#}
+{#                    data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"#}
+{#                    data-start="1250"#}
+{#                    data-splitin="none"#}
+{#                    data-splitout="none"#}
+{#                    data-actions='[{"event":"click","action":"scrollbelow","offset":"20px"}]'#}
+{#                    data-responsive="on">#}
+{#                    <a class="wprt-button big rounded-3px">CONTACT US</a>#}
+{#                </div>#}
+{#            </li>#}
+{#            <!-- End Slide -->#}
+{#        </ul>#}
+{#        <div class="tp-bannertimer tp-bottom"></div>#}
+{#    </div>#}
+{#</div>#}
+
+
+<!-- Main Content -->
+<div id="main-content" class="site-main clearfix">
+    <div id="content-wrap">
+        <div id="site-content" class="site-content clearfix">
+            <div id="inner-content" class="inner-content-wrap">
+                <div class="page-content">
+
+{#                    <!-- Promotion -->#}
+{#                    <section class="wprt-section promotion">#}
+{#                        <div class="container">#}
+{#                            <div class="row">#}
+{#                                <div class="col-md-8">#}
+{#                                    <div class="wprt-spacer" data-desktop="8" data-mobi="8" data-smobi="8"></div>#}
+{#                                    <h2 class="text-white text-center-mobile font-size-20 margin-bottom-0">Contractors & Construction Managers Since 1981</h2>#}
+{#                                    <div class="wprt-spacer" data-desktop="0" data-mobi="20" data-smobi="20"></div>#}
+{#                                </div><!-- /.col-md-8 -->#}
+{##}
+{#                                <div class="col-md-4">#}
+{#                                    <div class="text-right text-center-mobile"><a href="#" class="wprt-button white rounded-3px">GET A QUOTE</a></div>#}
+{#                                    <div class="wprt-spacer" data-desktop="0" data-mobi="15" data-smobi="15"></div>#}
+{#                                </div><!-- /.col-md-4 -->#}
+{##}
+{#                            </div><!-- /.row -->#}
+{#                        </div><!-- /.container -->#}
+{#                    </section>#}
+
+                    <!-- SERVICES -->
+                    <section id="services-section" class="wprt-section services">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="wprt-spacer" data-desktop="70" data-mobi="60" data-smobi="60"></div>
+                                    <h2 class="text-center margin-bottom-10">НАШИ КОМПЕТЕНЦИИ</h2>
+                                    <div class="wprt-lines style-2 custom-1">
+                                        <div class="line-1"></div>
+                                    </div>
+                                    <div class="wprt-spacer" data-desktop="50" data-mobi="40" data-smobi="40"></div>
+                                </div><!-- /.col-md-12 -->
+
+                                <div class="col-md-4">
+                                    <div class="wprt-icon-box accent-background rounded icon-effect-2 icon-left">
+                                        <div class="icon-wrap">
+                                            <span class="dd-icon icon-drawing"></span>
+                                        </div>
+                                        <div class="content-wrap">
+                                            <h3 class="dd-title font-size-18"><a href="#">Проектирование</a></h3>
+                                            <p>Проектируем электрические и инженерные сети</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="wprt-spacer" data-desktop="50" data-mobi="30" data-smobi="30"></div>
+
+                                    <div class="wprt-icon-box accent-background rounded icon-effect-2 icon-left">
+                                        <div class="icon-wrap">
+                                            <span class="dd-icon icon-o-light-bulb"></span>
+                                        </div>
+                                        <div class="content-wrap">
+                                            <h3 class="dd-title font-size-18"><a href="#">Электромонтажные работы</a></h3>
+                                            <p>Осуществляем электромонтажные работы любой сложности, установку и программирование слаботочных систем.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="wprt-spacer" data-desktop="0" data-mobi="30" data-smobi="30"></div>
+                                </div><!-- /.col-md-4 -->
+
+                                <div class="col-md-4">
+                                    <div class="wprt-icon-box accent-background rounded icon-effect-2 icon-left">
+                                        <div class="icon-wrap">
+                                            <span class="dd-icon icon-cement-truck"></span>
+                                        </div>
+                                        <div class="content-wrap">
+                                            <h3 class="dd-title font-size-18"><a href="#">Монолитные работы</a></h3>
+                                            <p>Возводим здания и сооружения любой формы и этажности</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="wprt-spacer" data-desktop="50" data-mobi="30" data-smobi="30"></div>
+
+                                    <div class="wprt-icon-box accent-background rounded icon-effect-2 icon-left">
+                                        <div class="icon-wrap">
+                                            <span class="dd-icon icon-tap-1"></span>
+                                        </div>
+                                        <div class="content-wrap">
+                                            <h3 class="dd-title font-size-18"><a href="#">Отопление и водоснабжение</a></h3>
+                                            <p>Осуществляем монтаж систем отопления и водоснабжения </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="wprt-spacer" data-desktop="0" data-mobi="30" data-smobi="30"></div>
+                                </div><!-- /.col-md-4 -->
+
+                                <div class="col-md-4">
+                                    <div class="wprt-icon-box accent-background rounded icon-effect-2 icon-left">
+                                        <div class="icon-wrap">
+                                            <span class="dd-icon icon-constructing-a-brick-wall"></span>
+                                        </div>
+                                        <div class="content-wrap">
+                                            <h3 class="dd-title font-size-18"><a href="#">Реставрация</a></h3>
+                                            <p>Выполняем реставрационные и восстановительные работы</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="wprt-spacer" data-desktop="50" data-mobi="30" data-smobi="30"></div>
+
+                                    <div class="wprt-icon-box accent-background rounded icon-effect-2 icon-left">
+                                        <div class="icon-wrap">
+                                            <span class="dd-icon icon-tool-bag"></span>
+                                        </div>
+                                        <div class="content-wrap">
+                                            <h3 class="dd-title font-size-18"><a href="#">Проектный менеджмент</a></h3>
+                                            <p>Четко выстроенная система котроля исполнения проектов на основе процессно-ориентированного подхода</p>
+                                        </div>
+                                    </div>
+                                </div><!-- /.col-md-4 -->
+
+                                <div class="col-md-12">
+                                    <div class="wprt-spacer" data-desktop="70" data-mobi="60" data-smobi="60"></div>
+                                </div><!-- /.col-md-12 -->
+                            </div><!-- /.row -->
+                        </div><!-- /.container -->
+                    </section>
+
+                    <!-- WORKS -->
+                    <section class="wprt-section works parallax" id="section_projects">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="wprt-spacer" data-desktop="70" data-mobi="60" data-smobi="60"></div>
+                                    <h2 class="text-left text-white">НАШИ ПРОЕКТЫ</h2>
+                                    <div class="wprt-lines custom-2">
+                                        <div class="line-1"></div>
+                                    </div>
+                                    <div class="wprt-spacer" data-desktop="50" data-mobi="40" data-smobi="40"></div>
+                                </div><!-- /.col-md-12 -->
+
+                                <div class="col-md-12">
+                                    <div class="wprt-project arrow-style-2 has-arrows arrow60 arrow-dark" data-layout="slider" data-column="3" data-column2="3" data-column3="2" data-column4="1" data-gaph="30" data-gapv="30">
+                                        <div id="projects" class="cbp">
+                                            {% for item in portfolio_items %}
+                                            <div class="cbp-item portfolio" id="{{ item.id }}">
+                                                <div class="project-item">
+                                                    <div class="inner">
+                                                        <div class="grid">
+                                                        <figure class="effect-honey">
+                                                            <img src="{% static 'images/portfolio' %}/{{ item.main_image }}" alt="image"/>
+                                                            <figcaption>
+                                                                <div>
+                                                                    <h2><a href="{% url 'portfolio_details' item.id %}">{{ item.client }}</a></h2>
+                                                                    <p>{{ item.sum }}</p>
+                                                                </div>
+                                                            </figcaption>
+                                                        </figure>
+                                                        </div>
+
+                                                        <a class="project-zoom cbp-lightbox" href="{% static 'images/portfolio' %}/{{ item.main_image }}" data-title="LUXURY BUILDINGS">
+                                                            <i class="fa fa-arrows-alt"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div><!--/.cbp-item -->
+                                            {% endfor %}
+
+{#                                            <div class="cbp-item">#}
+{#                                                <div class="project-item">#}
+{#                                                    <div class="inner">#}
+{#                                                        <figure class="effect-honey">#}
+{#                                                            <img src="{% static 'img/projects/2.jpg' %}" alt="image" />#}
+{#                                                            <figcaption>#}
+{#                                                                <div>#}
+{#                                                                    <h2><a target="_blank" href="page-project-detail-2.html">LUXURY BUILDINGS</a></h2>#}
+{#                                                                    <p>Construction</p>#}
+{#                                                                </div>#}
+{#                                                            </figcaption>#}
+{#                                                        </figure>#}
+{##}
+{#                                                        <a class="project-zoom cbp-lightbox" href="{% static 'img/projects/2-full.jpg' %}" data-title="LUXURY BUILDINGS">#}
+{#                                                            <i class="fa fa-arrows-alt"></i>#}
+{#                                                        </a>#}
+{#                                                    </div>#}
+{#                                                </div>#}
+{#                                            </div><!--/.cbp-item -->#}
+{##}
+{#                                            <div class="cbp-item">#}
+{#                                                <div class="project-item">#}
+{#                                                    <div class="inner">#}
+{#                                                        <figure class="effect-sadie">#}
+{#                                                            <img src="{% static 'img/projects/3.jpg' %}" alt="image" />#}
+{#                                                            <figcaption>#}
+{#                                                                <div>#}
+{#                                                                    <h2><a target="_blank" href="page-project-detail-3.html">LUXURY BUILDINGS</a></h2>#}
+{#                                                                    <p>Construction</p>#}
+{#                                                                </div>#}
+{#                                                            </figcaption>#}
+{#                                                        </figure>#}
+{##}
+{#                                                        <a class="project-zoom cbp-lightbox" href="{% static 'img/projects/3-full.jpg' %}" data-title="LUXURY BUILDINGS">#}
+{#                                                            <i class="fa fa-arrows-alt"></i>#}
+{#                                                        </a>#}
+{#                                                    </div>#}
+{#                                                </div>#}
+{#                                            </div><!--/.cbp-item -->#}
+{##}
+{#                                            <div class="cbp-item">#}
+{#                                                <div class="project-item">#}
+{#                                                    <div class="inner">#}
+{#                                                        <figure class="effect-zoe">#}
+{#                                                            <img src="{% static 'img/projects/1.jpg' %}" alt="image" />#}
+{#                                                            <figcaption>#}
+{#                                                                <div>#}
+{#                                                                    <h2><a target="_blank" href="page-project-detail-4.html">LUXURY BUILDINGS</a></h2>#}
+{#                                                                    <p>Construction</p>#}
+{#                                                                </div>#}
+{#                                                            </figcaption>#}
+{#                                                        </figure>#}
+{##}
+{#                                                        <a class="project-zoom cbp-lightbox" href="{% static 'img/projects/1-full.jpg' %}" data-title="LUXURY BUILDINGS">#}
+{#                                                            <i class="fa fa-arrows-alt"></i>#}
+{#                                                        </a>#}
+{#                                                    </div>#}
+{#                                                </div>#}
+{#                                            </div><!--/.cbp-item -->#}
+{##}
+{#                                            <div class="cbp-item">#}
+{#                                                <div class="project-item">#}
+{#                                                    <div class="inner">#}
+{#                                                        <figure class="effect-oscar">#}
+{#                                                            <img src="{% static 'img/projects/2.jpg' %}" alt="image" />#}
+{#                                                            <figcaption>#}
+{#                                                                <div>#}
+{#                                                                    <h2><a target="_blank" href="page-project-detail.html">LUXURY BUILDINGS</a></h2>#}
+{#                                                                    <p>Construction</p>#}
+{#                                                                </div>#}
+{#                                                            </figcaption>#}
+{#                                                        </figure>#}
+{##}
+{#                                                        <a class="project-zoom cbp-lightbox" href="{% static 'img/projects/2-full.jpg' %}" data-title="LUXURY BUILDINGS">#}
+{#                                                            <i class="fa fa-arrows-alt"></i>#}
+{#                                                        </a>#}
+{#                                                    </div>#}
+{#                                                </div>#}
+{#                                            </div><!--/.cbp-item -->#}
+{##}
+{#                                            <div class="cbp-item">#}
+{#                                                <div class="project-item">#}
+{#                                                    <div class="inner">#}
+{#                                                        <figure class="effect-sadie">#}
+{#                                                            <img src="{% static 'img/projects/3.jpg' %}" alt="image" />#}
+{#                                                            <figcaption>#}
+{#                                                                <div>#}
+{#                                                                    <h2><a target="_blank" href="page-project-detail-2.html">LUXURY BUILDINGS</a></h2>#}
+{#                                                                    <p>Construction</p>#}
+{#                                                                </div>#}
+{#                                                            </figcaption>#}
+{#                                                        </figure>#}
+{##}
+{#                                                        <a class="project-zoom cbp-lightbox" href="{% static 'img/projects/3-full.jpg' %}" data-title="LUXURY BUILDINGS">#}
+{#                                                            <i class="fa fa-arrows-alt"></i>#}
+{#                                                        </a>#}
+{#                                                    </div>#}
+{#                                                </div>#}
+{#                                            </div><!--/.cbp-item -->#}
+                                        </div><!-- /#projects -->
+                                    </div><!--/.wprt-project -->
+                                </div><!-- /.col-md-12 -->
+
+                                <div class="col-md-12">
+                                    <div class="wprt-spacer" data-desktop="80" data-mobi="60" data-smobi="60"></div>
+                                </div><!-- /.col-md-12 -->
+                            </div><!-- /.row -->
+                        </div><!-- /.container -->
+                    </section>
+
+                    <!-- WHY CHOOSE US -->
+                    <section class="wprt-section" id="section_why_us">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="wprt-spacer" data-desktop="70" data-mobi="60" data-smobi="60"></div>
+                                    <h2>5 причин работать с нами</h2>
+                                    <div class="wprt-lines style-1 custom-3">
+                                        <div class="line-1"></div>
+                                        <div class="line-2"></div>
+                                    </div>
+                                    <div class="wprt-spacer" data-desktop="50" data-mobi="40" data-smobi="40"></div>
+
+                                    <div class="wprt-toggle active style-1">
+                                        <h3 class="toggle-title">Многолетний опыт</h3>
+                                        <div class="toggle-content">Наша компания имеет опыт работы в строительств более 15 лет! Все эти годы мы работали в десятках проектах различной сложности</div>
+                                    </div>
+
+                                    <div class="wprt-toggle style-1">
+                                        <h3 class="toggle-title">Quality construction continues after the project</h3>
+                                        <div class="toggle-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a metus pellentesque, scelerisque ex sed, volutpat nisi. Curabitur tortor mi, eleifend ornare lobortis non. Nulla porta purus quis iaculis ultrices. Proin aliquam sem at nibh hendrerit sagittis. Nullam ornare odio eu lacus tincidunt malesuada. Sed eu vestibulum elit. Curabitur tortor mi, eleifend ornare.</div>
+                                    </div>
+
+                                    <div class="wprt-toggle style-1">
+                                        <h3 class="toggle-title">We use technology to do the job more quickly</h3>
+                                        <div class="toggle-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a metus pellentesque, scelerisque ex sed, volutpat nisi. Curabitur tortor mi, eleifend ornare lobortis non. Nulla porta purus quis iaculis ultrices. Proin aliquam sem at nibh hendrerit sagittis. Nullam ornare odio eu lacus tincidunt malesuada. Sed eu vestibulum elit. Curabitur tortor mi, eleifend ornare.</div>
+                                    </div>
+
+                                    <div class="wprt-toggle style-1">
+                                        <h3 class="toggle-title">Employees are continually trained on safety issues</h3>
+                                        <div class="toggle-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a metus pellentesque, scelerisque ex sed, volutpat nisi. Curabitur tortor mi, eleifend ornare lobortis non. Nulla porta purus quis iaculis ultrices. Proin aliquam sem at nibh hendrerit sagittis. Nullam ornare odio eu lacus tincidunt malesuada. Sed eu vestibulum elit. Curabitur tortor mi, eleifend ornare.</div>
+                                    </div>
+                                </div><!-- /.col-md-6 -->
+
+{#                                <div class="col-md-6">#}
+{#                                    <div class="wprt-spacer" data-desktop="70" data-mobi="60" data-smobi="60"></div>#}
+{#                                    <h2>ABOUT US</h2>#}
+{#                                    <div class="wprt-lines style-1 custom-3">#}
+{#                                        <div class="line-1"></div>#}
+{#                                        <div class="line-2"></div>#}
+{#                                    </div>#}
+{#                                    <div class="wprt-spacer" data-desktop="50" data-mobi="40" data-smobi="40"></div>#}
+{##}
+{#                                    <div class="wprt-galleries galleries w-570px" data-width="135" data-margin="10">#}
+{#                                        <div id="wprt-slider" class="flexslider">#}
+{#                                            <ul class="slides">#}
+{#                                                <li class="flex-active-slide">#}
+{#                                                    <a class="zoom" href="{% static 'img/gallery/1.jpg' %}"><i class="fa fa-arrows-alt"></i></a>#}
+{#                                                    <img src="{% static 'img/gallery/1.jpg' %}" alt="image" />#}
+{#                                                </li>#}
+{##}
+{#                                                <li class="flex-active-slide">#}
+{#                                                    <a class="zoom" href="{% static 'img/gallery/2.jpg' %}"><i class="fa fa-arrows-alt"></i></a>#}
+{#                                                    <img src="{% static 'img/gallery/2.jpg' %}" alt="image" />#}
+{#                                                </li>#}
+{##}
+{#                                                <li class="flex-active-slide">#}
+{#                                                    <a class="zoom" href="{% static 'img/gallery/3.jpg' %}"><i class="fa fa-arrows-alt"></i></a>#}
+{#                                                    <img src="{% static 'img/gallery/3.jpg' %}" alt="image" />#}
+{#                                                </li>#}
+{##}
+{#                                                <li class="flex-active-slide">#}
+{#                                                    <a class="zoom" href="{% static 'img/gallery/4.jpg' %}"><i class="fa fa-arrows-alt"></i></a>#}
+{#                                                    <img src="{% static 'img/gallery/4.jpg' %}" alt="image" />#}
+{#                                                </li>#}
+{#                                            </ul>#}
+{#                                        </div>#}
+{##}
+{#                                        <div id="wprt-carousel" class="flexslider">#}
+{#                                            <ul class="slides">#}
+{#                                                <li><img src="{% static 'img/gallery/1-s.jpg' %}" alt="image"></li>#}
+{#                                                <li><img src="{% static 'img/gallery/2-s.jpg' %}" alt="image"></li>#}
+{#                                                <li><img src="{% static 'img/gallery/3-s.jpg' %}" alt="image"></li>#}
+{#                                                <li><img src="{% static 'img/gallery/4-s.jpg' %}" alt="image"></li>#}
+{#                                            </ul>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                </div><!-- /.col-md-6 -->#}
+
+                                <div class="col-md-12">
+                                    <div class="wprt-spacer" data-desktop="70" data-mobi="60" data-smobi="60"></div>
+                                </div><!-- /.col-md-12 -->
+                            </div><!-- /.row -->
+                        </div><!-- /.container -->
+                    </section>
+
+                    <!-- OFFER -->
+                    <section class="wprt-section offer" id="section_directions">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="wprt-spacer" data-desktop="70" data-mobi="60" data-smobi="60"></div>
+                                    <h2>Направления деятельности</h2>
+                                    <div class="wprt-lines style-1 custom-5">
+                                        <div class="line-1"></div>
+                                        <div class="line-2"></div>
+                                    </div>
+                                    <div class="wprt-spacer" data-desktop="50" data-mobi="40" data-smobi="40"></div>
+                                </div><!-- /.col-md-12 -->
+
+                                <div class="col-md-12">
+                                    <div class="wprt-service arrow-style-2 has-arrows arrow60 arrow-light" data-layout="slider" data-column="3" data-column2="3" data-column3="2" data-column4="1" data-gaph="30" data-gapv="30">
+                                        <div id="service-wrap" class="cbp">
+                                            <div class="cbp-item">
+                                                <div class="service-item clearfix">
+                                                    <div class="thumb"><img src="{% static 'img/directions/civil.png' %}" alt="civil" /></div>
+                                                    <div class="service-item-wrap">
+                                                        <h3 class="title font-size-18"><a href="#">Жилищное строительство</a></h3>
+                                                        <p class="desc">Полный комплекс строительно-монтажных работ различных потребительских форматов от коттеджных поселков до высотных многофункциональных комплексов. Капитальный ремонт ветхого и аварийного жилья </p>
+{#                                                        <a href="#" class="wprt-button small rounded-3px">READ MORE</a>#}
+                                                    </div>
+                                                </div>
+                                            </div><!-- /.cbp-item -->
+
+                                            <div class="cbp-item">
+                                                <div class="service-item clearfix">
+                                                    <div class="thumb"><img src="{% static 'img/directions/commercial.png' %}" alt="commercial" /></div>
+                                                    <div class="service-item-wrap">
+                                                        <h3 class="title font-size-18"><a href="#">Коммерческое строительство</a></h3>
+                                                        <p class="desc">Проектирование, строительство и ремонт объектов коммерческого назначения: торгово-развлекательных и офисных центров, супермаркетов</p>
+{#                                                        <a href="#" class="wprt-button small rounded-3px">READ MORE</a>#}
+                                                    </div>
+                                                </div>
+                                            </div><!-- /.cbp-item -->
+
+                                            <div class="cbp-item">
+                                                <div class="service-item clearfix">
+                                                    <div class="thumb"><img src="{% static 'img/directions/infrastructure.png' %}" alt="image" /></div>
+                                                    <div class="service-item-wrap">
+                                                        <h3 class="title font-size-18"><a href="#">Инфраструктурное строительство</a></h3>
+                                                        <p class="desc">Большой опыт работы по новому строительству и капитальному ремонту объектов социальной, транспортной и инженерной инфраструктуры (объектов сетевой энергетики: воздушные линии и трансформаторные подстанции) </p>
+{#                                                        <a href="#" class="wprt-button small rounded-3px">READ MORE</a>#}
+                                                    </div>
+                                                </div>
+                                            </div><!-- /.cbp-item -->
+
+                                            <div class="cbp-item">
+                                                <div class="service-item clearfix">
+                                                    <div class="thumb"><img src="{% static 'img/directions/industry.png' %}" alt="image" /></div>
+                                                    <div class="service-item-wrap">
+                                                        <h3 class="title font-size-18"><a href="#">Промышленное строительство</a></h3>
+                                                        <p class="desc">Комплексное проектирование и строительство объектов промышленного назначения: зданий и сооружений, производственных комплексов и складов, резервуаров и
+трубопроводов </p>
+{#                                                        <a href="#" class="wprt-button small rounded-3px">READ MORE</a>#}
+                                                    </div>
+                                                </div>
+                                            </div><!-- /.cbp-item -->
+                                        </div><!-- /#service-wrap -->
+                                    </div><!-- /.wprt-service -->
+                                </div><!-- /.col-md-12 -->
+
+                                <div class="col-md-12">
+                                    <div class="wprt-spacer" data-desktop="80" data-mobi="60" data-smobi="60"></div>
+                                </div><!-- /.col-md-12 -->
+                            </div><!-- /.row -->
+                        </div><!-- /.container -->
+                    </section>
+
+                    <!-- FACTS -->
+{#                    <section class="wprt-section facts parallax">#}
+{#                        <div class="container">#}
+{#                            <div class="row">#}
+{#                                <div class="col-md-4">#}
+{#                                </div><!-- /.col-md-4 -->#}
+{#                                <div class="col-md-8">#}
+{#                                    <div class="wprt-spacer" data-desktop="120" data-mobi="80" data-smobi="60"></div>#}
+{#                                    <h2 class="text-right text-center-mobile text-white font-family-extend font-size-25 margin-bottom-0 line-height-normal letter-spacing-1px">The Construction Company</h2>#}
+{#                                    <h3 class="text-right text-center-mobile text-white font-family-heading font-size-70 line-height-normal margin-bottom-20 letter-spacing-1px"><strong>AWESOME FACTS</strong></h3>#}
+{#                                </div><!-- /.col-md-8 -->#}
+{#                                <div class="col-md-6">#}
+{#                                </div><!-- /.col-md-6 -->#}
+{#                                <div class="col-md-2">#}
+{#                                    <div class="wprt-counter text-center white-type has-plus">#}
+{#                                        <div class="number" data-speed="5000" data-to="13691" data-in-viewport="yes">13691</div>#}
+{#                                        <div class="text">PROJECT COMPLETED</div>#}
+{#                                    </div>#}
+{#                                    <div class="wprt-spacer" data-desktop="0" data-mobi="25" data-smobi="25"></div>#}
+{#                                </div><!-- /.col-md-2 -->#}
+{#                                <div class="col-md-2">#}
+{#                                    <div class="wprt-counter text-center white-type has-plus">#}
+{#                                        <div class="number" data-speed="5000" data-to="1725" data-in-viewport="yes">1725</div>#}
+{#                                        <div class="text">SATISFIED CLIENTS</div>#}
+{#                                    </div>#}
+{#                                    <div class="wprt-spacer" data-desktop="0" data-mobi="25" data-smobi="25"></div>#}
+{#                                </div><!-- /.col-md-2 -->#}
+{#                                <div class="col-md-2">#}
+{#                                    <div class="wprt-counter text-center white-type has-plus">#}
+{#                                        <div class="number" data-speed="5000" data-to="984" data-in-viewport="yes">984</div>#}
+{#                                        <div class="text">WORKERS EMPLOYED</div>#}
+{#                                    </div>#}
+{#                                </div><!-- /.col-md-2 -->#}
+{#                                <div class="col-md-12">#}
+{#                                    <div class="wprt-spacer" data-desktop="130" data-mobi="80" data-smobi="60"></div>#}
+{#                                </div><!-- /.col-md-12 -->#}
+{#                            </div><!-- /.row -->#}
+{#                        </div><!-- /.container -->#}
+{#                    </section>#}
+
+                    <!-- TESTIMONIALS -->
+{#                    <section class="wprt-section testiminials">#}
+{#                        <div class="container">#}
+{#                            <div class="row">#}
+{#                                <div class="col-md-12">#}
+{#                                    <div class="wprt-spacer" data-desktop="70" data-mobi="60" data-smobi="60"></div>#}
+{#                                </div><!-- /.col-md-12 -->#}
+{##}
+{#                                <div class="col-md-12">#}
+{#                                    <h2>OUR PARTNERS</h2>#}
+{#                                    <div class="wprt-lines style-1 custom-3">#}
+{#                                        <div class="line-1"></div>#}
+{#                                        <div class="line-2"></div>#}
+{#                                    </div>#}
+{#                                    <div class="wprt-spacer" data-desktop="50" data-mobi="40" data-smobi="40"></div>#}
+{##}
+{#                                    <div class="wprt-partner-grid has-outline col-3 gutter-10">#}
+{#                                        <div class="partner-wrap clearfix">#}
+{#                                            <div class="partner-row clearfix">#}
+{#                                                <div class="partner-item">#}
+{#                                                    <div class="inner-item">#}
+{#                                                        <a target="_blank" href="#"><img src="{% static 'img/partners/1.png' %}" alt="image" /></a>#}
+{#                                                    </div>#}
+{#                                                </div><!-- /.partner-item -->#}
+{##}
+{#                                                <div class="partner-item">#}
+{#                                                    <div class="inner-item">#}
+{#                                                        <a target="_blank" href="#"><img src="{% static 'img/partners/2.png' %}" alt="image" /></a>#}
+{#                                                    </div>#}
+{#                                                </div><!-- /.partner-item -->#}
+{##}
+{#                                                <div class="partner-item">#}
+{#                                                    <div class="inner-item">#}
+{#                                                        <a target="_blank" href="#"><img src="{% static 'img/partners/3.png' %}" alt="image" /></a>#}
+{#                                                    </div>#}
+{#                                                </div><!-- /.partner-item -->#}
+{#                                                <div class="partner-item">#}
+{#                                                    <div class="inner-item">#}
+{#                                                        <a target="_blank" href="#"><img src="{% static 'img/partners/4.png' %}" alt="image" /></a>#}
+{#                                                    </div>#}
+{#                                                </div><!-- /.partner-item -->#}
+{##}
+{#                                                <div class="partner-item">#}
+{#                                                    <div class="inner-item">#}
+{#                                                        <a target="_blank" href="#"><img src="{% static 'img/partners/5.png' %}" alt="image" /></a>#}
+{#                                                    </div>#}
+{#                                                </div><!-- /.partner-item -->#}
+{##}
+{#                                                <div class="partner-item">#}
+{#                                                    <div class="inner-item">#}
+{#                                                        <a target="_blank" href="#"><img src="{% static 'img/partners/6.png' %}" alt="image" /></a>#}
+{#                                                    </div>#}
+{#                                                </div><!-- /.partner-item -->#}
+{##}
+{#                                            </div>#}
+{##}
+{#                                            <div class="partner-row clearfix">#}
+{#                                                <div class="partner-item">#}
+{#                                                    <div class="inner-item">#}
+{#                                                        <a target="_blank" href="#"><img src="{% static 'img/partners/4.png' %}" alt="image" /></a>#}
+{#                                                    </div>#}
+{#                                                </div><!-- /.partner-item -->#}
+{##}
+{#                                                <div class="partner-item">#}
+{#                                                    <div class="inner-item">#}
+{#                                                        <a target="_blank" href="#"><img src="{% static 'img/partners/5.png' %}" alt="image" /></a>#}
+{#                                                    </div>#}
+{#                                                </div><!-- /.partner-item -->#}
+{##}
+{#                                                <div class="partner-item">#}
+{#                                                    <div class="inner-item">#}
+{#                                                        <a target="_blank" href="#"><img src="{% static 'img/partners/6.png' %}" alt="image" /></a>#}
+{#                                                    </div>#}
+{#                                                </div><!-- /.partner-item -->#}
+{#                                            </div>#}
+{#                                        </div><!-- /.partner-wrap -->#}
+{#                                    </div><!-- /.wprt-partner-grid -->#}
+{##}
+{#                                    <div class="wprt-spacer" data-desktop="0" data-mobi="40" data-smobi="40"></div>#}
+{#                                </div><!-- /.col-md-6 -->#}
+{##}
+{#                                <div class="col-md-6">#}
+{#                                    <h2>TESTIMONIALS</h2>#}
+{#                                    <div class="wprt-lines style-1 custom-3">#}
+{#                                        <div class="line-1"></div>#}
+{#                                        <div class="line-2"></div>#}
+{#                                    </div>#}
+{#                                    <div class="wprt-spacer" data-desktop="50" data-mobi="40" data-smobi="40"></div>#}
+{##}
+{#                                    <div class="wprt-testimonials has-outline arrow-style-2 has-arrows arrow60 arrow-light" data-layout="slider" data-column="1" data-column2="1" data-column3="1" data-column4="1" data-gaph="0" data-gapv="0">#}
+{#                                        <div id="testimonials-wrap" class="cbp">#}
+{#                                            <div class="cbp-item">#}
+{#                                                <div class="customer clearfix">#}
+{#                                                    <div class="inner">#}
+{#                                                        <div class="image"><img src="{% static 'img/testimonials/1.jpg' %}" alt="image" /></div>#}
+{#                                                        <h4 class="name">DON PAULSON</h4>#}
+{#                                                        <div class="position">Architectural Co.</div>#}
+{#                                                        <blockquote class="whisper">Your efficient planning, scheduling, management, and supervision resulted in timely completion and a quality facility...Particularly refreshing was the spirit of cooperation demonstrated by your firm which served to minimize costly delays and contract modifications.</blockquote>#}
+{#                                                    </div>#}
+{#                                                </div>#}
+{#                                            </div><!-- /.cbp-item -->#}
+{##}
+{#                                            <div class="cbp-item">#}
+{#                                                <div class="customer clearfix">#}
+{#                                                    <div class="inner">#}
+{#                                                        <div class="image"><img src="{% static 'img/testimonials/2.jpg' %}" alt="image" /></div>#}
+{#                                                        <h4 class="name">DON PAULSON</h4>#}
+{#                                                        <div class="position">Architectural Co.</div>#}
+{#                                                        <blockquote class="whisper">Your efficient planning, scheduling, management, and supervision resulted in timely completion and a quality facility...Particularly refreshing was the spirit of cooperation demonstrated by your firm which served to minimize costly delays and contract modifications.</blockquote>#}
+{#                                                    </div>#}
+{#                                                </div>#}
+{#                                            </div><!-- /.cbp-item -->#}
+{##}
+{#                                            <div class="cbp-item">#}
+{#                                                <div class="customer clearfix">#}
+{#                                                    <div class="inner">#}
+{#                                                        <div class="image"><img src="{% static 'img/testimonials/3.jpg' %}" alt="image" /></div>#}
+{#                                                        <h4 class="name">DON PAULSON</h4>#}
+{#                                                        <div class="position">Architectural Co.</div>#}
+{#                                                        <blockquote class="whisper">Your efficient planning, scheduling, management, and supervision resulted in timely completion and a quality facility...Particularly refreshing was the spirit of cooperation demonstrated by your firm which served to minimize costly delays and contract modifications.</blockquote>#}
+{#                                                    </div>#}
+{#                                                </div>#}
+{#                                            </div><!-- /.cbp-item -->#}
+{#                                        </div><!-- /#service-wrap -->#}
+{#                                    </div><!-- /.wprt-service -->#}
+{#                                </div><!-- /.col-md-6 -->#}
+{##}
+{#                                <div class="col-md-12">#}
+{#                                    <div class="wprt-spacer" data-desktop="70" data-mobi="60" data-smobi="60"></div>#}
+{#                                </div><!-- /.col-md-12 -->#}
+{#                            </div><!-- /.row -->#}
+{#                        </div><!-- /.container -->#}
+{#                    </section>#}
+                </div><!-- /.page-content -->
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block script %}
+
+    <script>
+        $(document).ready(function () {
+            {% if item_goto == 'compet' %}
+                $('html, body').animate({
+                    scrollTop: $("#services-section").offset().top
+                }, 2000);
+
+            {% endif %}
+            {% if item_goto == 'project' %}
+                $('html, body').animate({
+                    scrollTop: $("#section_projects").offset().top
+                }, 2000);
+
+            {% endif %}
+            {% if item_goto == 'why_us' %}
+                $('html, body').animate({
+                    scrollTop: $("#section_why_us").offset().top
+                }, 2000);
+
+            {% endif %}
+            {% if item_goto == 'directions' %}
+                $('html, body').animate({
+                    scrollTop: $("#section_directions").offset().top
+                }, 2000);
+
+            {% endif %}
+            $('.portfolio').on('click', function () {
+                var id = $(this).prop('id');
+                window.location.href = '/portfolio_details/' + id;
+            });
+
+            $(".menu_projects").click(function () {
+                $('html, body').animate({
+                    scrollTop: $("#section_projects").offset().top
+                }, 2000);
+            });
+            $(".menu_why_us").click(function () {
+                $('html, body').animate({
+                    scrollTop: $("#section_why_us").offset().top
+                }, 2000);
+            });
+            $(".menu_directions").click(function () {
+                $('html, body').animate({
+                    scrollTop: $("#section_directions").offset().top
+                }, 2000);
+            });
+
+            $(".menu_compet").click(function () {
+                $('html, body').animate({
+                    scrollTop: $("#services-section").offset().top
+                }, 2000);
+            });
+        })
+    </script>
+
+
+{% endblock %}

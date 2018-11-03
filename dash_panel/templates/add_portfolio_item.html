@@ -1,0 +1,368 @@
+{% extends 'base_dash_panel.html' %}
+
+{% load staticfiles %}
+
+
+
+{% block links %}
+
+{#    <link href="{% static 'admin_panel/bower_components/bootstrap/dist/css/' %}" rel="stylesheet" type="text/css"/>#}
+    <link href="{% static 'admin_panel/bower_components/switchery/dist/switchery.min.css' %}" rel="stylesheet" type="text/css"/>
+    <link href="{% static 'admin_panel/bower_components/dropzone/dropzone.css' %}" rel="stylesheet" type="text/css"/>
+    <link href="{% static 'admin_panel/bower_components/multi-select/css/multi-select.css' %}" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="//cdn.materialdesignicons.com/1.9.32/css/materialdesignicons.min.css">
+
+
+
+{% endblock %}
+
+{% block content %}
+            <div class="page-wrapper" style="min-height: 337px;">
+				<div class="container-fluid">
+
+					<!-- Title -->
+					<div class="row heading-bg">
+						<div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+						  <h5 class="txt-dark">Добавление проекта в портфолио</h5>
+						</div>
+						<!-- Breadcrumb -->
+{#						<div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">#}
+{#						  <ol class="breadcrumb">#}
+{#							<li><a href="index.html">Dashboard</a></li>#}
+{#							<li><a href="#"><span>form</span></a></li>#}
+{#							<li class="active"><span>form-element</span></li>#}
+{#						  </ol>#}
+{#						</div>#}
+						<!-- /Breadcrumb -->
+					</div>
+					<!-- /Title -->
+
+					<!-- Row -->
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="panel panel-default card-view">
+								<div class="panel-heading">
+									<div class="pull-left">
+										<h6 class="panel-title txt-dark">Форма</h6>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+								<div class="panel-wrapper collapse in">
+									<div class="panel-body">
+										<div class="form-wrap">
+											<form id="item_form" method="POST">{% csrf_token %}
+
+{#                                                <div class="form-group">#}
+{#                                                    <label class="control-label mb-10">Select box</label>#}
+{#                                                        <div class="btn-group bootstrap-select dropup"><button type="button" class="btn dropdown-toggle form-control btn-default btn-outline" data-toggle="dropdown" role="button" title="Mustard" aria-expanded="false"><span class="filter-option pull-left">Mustard</span>&nbsp;<span class="bs-caret"><span class="caret"></span></span></button><div class="dropdown-menu open" role="combobox" style="max-height: 138px; overflow: hidden; min-height: 0px;"><ul class="dropdown-menu inner" role="listbox" aria-expanded="false" style="max-height: 128px; overflow-y: auto; min-height: 0px;"><li data-original-index="0" class="selected ms-hover"><a tabindex="0" class="" style="" data-tokens="null" role="option" aria-disabled="false" aria-selected="true"><span class="text">Mustard</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="1"><a tabindex="0" class="" style="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Ketchup</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="2"><a tabindex="0" class="" style="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Relish</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li></ul></div><select class="selectpicker" data-style="form-control btn-default btn-outline" tabindex="-98">#}
+{#                                                            <option>Mustard</option>#}
+{#                                                            <option>Ketchup</option>#}
+{#                                                            <option>Relish</option>#}
+{#                                                        </select></div>#}
+{#                                                </div>#}
+
+
+
+
+												<div class="form-group">
+													<label class="control-label mb-10 text-left"  for="client">Заказчик</label>
+													<input class="form-control" id="client" name="client">
+												</div>
+												<div class="form-group">
+													<label class="control-label mb-10 text-left" for="period">Период</label>
+													<input type="" id="period" name="period" class="form-control">
+												</div>
+												<div class="form-group">
+													<label class="control-label mb-10 text-left" for="name">Объект</label>
+													<input id="name" name="name" class="form-control">
+												</div>
+												<div class="form-group">
+													<label class="control-label mb-10 text-left" for="name">Объект (короткое название)</label>
+													<input id="short_name" name="short_name" class="form-control">
+												</div>
+												<div class="form-group">
+													<label class="control-label mb-10 text-left" for="sum">Сумма</label>
+													<input id="sum" name="sum" class="form-control">
+												</div>
+												<div class="form-group">
+													<label class="control-label mb-10 text-left" for="vol">Объем</label>
+													<input id="vol" name="vol" class="form-control">
+												</div>
+{#												<div class="form-group">#}
+{#													<label class="control-label mb-10 text-left">Примечания</label>#}
+{#													<textarea class="form-control" rows="5"></textarea>#}
+{#												</div>#}
+											</form>
+
+                                    <div class="clearfix padding-15">
+                                        <h5 class="card-inside-title">Изображения для галереи (Порядок - [370*370], [770*513, 142*80])</h5>
+                                        <div id="drop_zone_img_files" class="dropzone dz-clickable border-2-dotted-grey col-xs-12">
+                                            <div class="dz-message">
+                                                <div class="drag-icon-cph">
+                                                    <i class="material-icons">touch_app</i>
+                                                </div>
+                                                <h6 class="font-family-roboto font-weight-100">Загрузите файл(ы)</h6>
+                                                <em>Перетащите файлы в эту область или нажмите для <strong>загрузки</strong></em>
+                                            </div>
+                                            <div class="fallback">
+                                                <input name="file" type="file" multiple />
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+										</div>
+
+
+
+
+									</div>
+
+
+
+								</div>
+
+
+
+
+
+							</div>
+						</div>
+					</div>
+					<!-- /Row -->
+
+				</div>
+
+				<!-- Footer -->
+{#				<footer class="footer container-fluid pl-30 pr-30">#}
+{#					<div class="row">#}
+{#						<div class="col-sm-12">#}
+{#							<p>2018 © Winkle. Pampered by Hencework</p>#}
+{#						</div>#}
+{#					</div>#}
+{#				</footer>#}
+				<!-- /Footer -->
+
+			</div>
+        <button id="save_btn" class="btn  btn-primary btn-rounded btn-corner-fixed"><i class="ti-save font-size-20-imp"></i></button>
+
+{% endblock %}
+{% block script %}
+
+    <script src="{% static 'admin_panel/bower_components/bootstrap-select/dist/js/bootstrap-select.min.js' %}"></script>
+    <script src="{% static 'admin_panel/bower_components/select2/dist/js/select2.full.min.js' %}"></script>
+    <script src="{% static 'admin_panel/bower_components/switchery/dist/switchery.min.js' %}"></script>
+    <script src="{% static 'admin_panel/bower_components/dropzone/dropzone_ru.js' %}"></script>
+    <script src="{% static 'admin_panel/bower_components/multi-select/js/jquery.multi-select.js' %}"></script>
+    <script src="{% static 'admin_panel/js/form-advance-data.js' %}"></script>
+
+
+    <script>
+
+function add_csrf() {
+
+
+    function getCookie(name) {
+        var cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            var cookies = document.cookie.split(';');
+            for (var i = 0; i < cookies.length; i++) {
+                var cookie = jQuery.trim(cookies[i]);
+                // Does this cookie string begin with the name we want?
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+
+    $.ajaxSetup({
+        beforeSend: function(xhr, settings) {
+            if (!(/^http:.*/.test(settings.url) || /^https:.*/.test(settings.url))) {
+                // Only send the token to relative URLs i.e. locally.
+                xhr.setRequestHeader("X-CSRFToken", getCookie('csrftoken'));
+            }
+        }
+    });
+}
+
+
+    Dropzone.autoDiscover = false;
+        //сохранение изображения для галлереи
+        var drop_zone_img_files = new Dropzone('#drop_zone_img_files', {
+            url: "{% url 'dash_panel:add_portfolio_item' %}",
+            autoProcessQueue: false,
+            addRemoveLinks: true,
+            uploadMultiple: true,
+            parallelUploads: 100,
+            maxFiles: 100,
+            init: function() {
+                $('#save_btn').on('click', function () {
+                    if ($('#client').val() == '' || $('#period').val() == '' || $('#name').val() == '' || $('#sum').val() == ''|| $('#vol').val() == ''){
+                        swal({
+                            title: 'Ошибка',
+                            text: 'Все поля должны быть заполнены',
+                            type: 'error',
+                            confirmButtonText: 'Ok',
+                            closeOnConfirm: false
+                        });
+                    }else {
+
+                        drop_zone_img_files.processQueue();
+                    }
+                })
+            },
+            sendingmultiple: function (file, xhr, formData) {
+                add_csrf();
+{#                merge_data(formData);#}
+
+{#                formData.append('name', {{ order_details.id }});#}
+                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
+                formData.append('name', $('#name').val());
+                formData.append('short_name', $('#short_name').val());
+                formData.append('client', $('#client').val());
+                formData.append('period', $('#period').val());
+                formData.append('sum', $('#sum').val());
+                formData.append('vol', $('#vol').val());
+{#                formData.append('meal_description', $('#meal_description').val());#}
+{#                formData.append('meal_short_description', $('#meal_short_description').val());#}
+{#                formData.append('meal_price', $('#meal_price').val());#}
+{#                formData.append('meal_type', $('#meal_type').val());#}
+{#                formData.append('meal_weight', $('#meal_weight').val());#}
+{#                formData.append('place_fotos', $('#meal_foto')[0].files[0]);#}
+{#                $('.ms-selection .ms-selected').each(function (index) {#}
+{#                    formData.append('ingredient_' + index, $('span', this).text());#}
+{##}
+{#                });#}
+
+
+            },
+            successmultiple: function (file, data) {
+{#                console.log(data.code);#}
+{#                window.location.href = '/dashboard/meals_menu/';#}
+
+
+                {#                var files_qnt = 0;#}
+{#                var data_json = $.parseJSON(data);#}
+{#                var files = data_json['files'];#}
+{#                var add_data = data_json['additional_data'];#}
+{#                var date_time = add_data['date_time'];#}
+{#                var name = add_data['name'];#}
+{#                var role = add_data['role'];#}
+{#                for (var key in files){#}
+{#                    if (files.hasOwnProperty(key)){#}
+{#                        files_qnt ++;#}
+{#                        var file_id = key;#}
+{#                        var file_name = files[key];#}
+{#                        $('#fileList').append('<div class="translation_file list-group-item row margin-left-0 margin-right-0 margin-top-10" id="file_' + file_id + '"><div class="col-xs-1 margin-bottom-0" data-toggle="tooltip" title="Удалить файл" data-placement="left"><i class="mdi mdi-close text_label prefix pointer-pure del_file"   style="width: 28px"></i></div><div class="col-xs-11 margin-bottom-0 padding-top-3"><p class="pointer-pure display-inline file_download">' + file_name + '</p></div></div>');#}
+{##}
+{#                    }#}
+{##}
+{#                }#}
+{#                add_timeline_item(date_time, name, role, 'Добавлены файлы заявки: ' + files_qnt +' шт.' );#}
+{#                drop_zone_order_files.removeAllFiles();#}
+            },
+            complete: function (data) {
+                if (data.status != 'error'){
+                    swal({
+                        title: 'Информация сохранена',
+                        text: 'Информация на сервере успешно сохранена',
+                        type: 'success',
+                        confirmButtonColor: '#3085d6',
+                        confirmButtonText: 'Ок',
+                        closeOnConfirm: true
+                    },
+                    function (isConfirm) {
+                        if (isConfirm){
+                            window.location.href = '/dash_panel/portfolio_list/';
+                        }
+                    });
+
+                }else {
+                    swal({
+                        title: 'Ошибка',
+                        text: 'При сохранении произошла ошибка. Попробуйте позже.',
+                        type: 'error'
+                    });
+                drop_zone_img_files.removeAllFiles();
+
+                }
+            },
+            error: function () {
+                swal({
+                    title: 'Ошибка',
+                    text: 'При сохранении произошла ошибка. Попробуйте позже.',
+                    type: 'error'
+                });
+{#                drop_zone_img_files.removeAllFiles();#}
+
+            }
+{#            autoProcessQueue: false#}
+        });
+
+
+
+{#            $('#save_btn').on('click', function (e) {#}
+{#                e.preventDefault();#}
+{#                console.log('submit');#}
+{#                if ($('#client').val() == '' || $('#period').val() == '' || $('#name').val() == '' || $('#sum').val() == ''|| $('#vol').val() == ''){#}
+{#                    swal({#}
+{#                        title: 'Ошибка',#}
+{#                        text: 'Все поля должны быть заполнены',#}
+{#                        type: 'error',#}
+{#                        confirmButtonText: 'Ok',#}
+{#                        closeOnConfirm: false#}
+{#                    });#}
+{#                }else {#}
+{#                    var formdata = new FormData($('#item_form').get(0));#}
+{#                    $.ajax({#}
+{#                        url: "{% url 'dash_panel:add_portfolio_item' %}",#}
+{#                        type: 'POST',#}
+{##}
+{#                        data: formdata,#}
+{##}
+{##}
+{#                        processData: false,#}
+{#                        contentType: false,#}
+{#                        error: function(data){#}
+{#                            console.log('error' + data);#}
+{#                        },#}
+{#                        success:function (data) {#}
+            {#                console.log(''data);#}
+{#                            if (data == 'error'){#}
+{#                                swal({#}
+{#                                    title: 'Ошибка',#}
+{#                                    text: 'Email или пароль указаны не верно',#}
+{#                                    type: 'error',#}
+{#                                    confirmButtonText: 'Ok',#}
+{#                                    closeOnConfirm: false#}
+{#                                });#}
+{##}
+{#                            }else {#}
+{##}
+{#                                swal({#}
+{#                                    title: 'Информация сохранена',#}
+{#                                    text: 'Информация о пользователе успешно сохранена',#}
+{#                                    type: 'success',#}
+{#                                    confirmButtonText: 'Ok',#}
+{#                                    closeOnConfirm: true#}
+{#                                },#}
+{#                                function (isConfirm) {#}
+{#                                    window.location.href = '/dash_panel/index';#}
+{#                                });#}
+{##}
+{##}
+{#                            }#}
+{#                        }#}
+{#                    });#}
+{##}
+{#                }#}
+{##}
+{#            })#}
+
+    </script>
+
+{% endblock %}

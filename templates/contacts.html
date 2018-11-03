@@ -1,0 +1,175 @@
+{% extends 'base_fixed_header.html' %}
+{% load staticfiles %}
+
+
+{% block main_content %}
+    <!-- Featured Title -->
+<div id="featured-title" class="clearfix featured-title-left margin-top-100">
+    <div id="featured-title-inner" class="container clearfix">
+        <div class="featured-title-inner-wrap padding-25-0">
+            <div class="featured-title-heading-wrap">
+                <h1 class="featured-title-heading">Наши контакты</h1>
+            </div>
+            <div id="breadcrumbs">
+                <div class="breadcrumbs-inner">
+                    <div class="breadcrumb-trail">
+                        <a href="{% url 'index' %}" title="ДЭЛЛИНА" rel="home" class="trail-begin">Домой</a>
+                        <span class="sep">/</span>
+                        <span class="trail-end">Контакты</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="main-content" class="site-main clearfix ">
+    <div id="content-wrap">
+        <div id="site-content" class="site-content clearfix">
+            <div id="inner-content" class="inner-content-wrap">
+                <div class="page-content">
+                    <section class="wprt-section">
+                        <div class="container margin-top-40">
+                            <div class="row">
+                                <div class="col-md-12">
+
+                                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Adf1c9f81d9934b20dc30117ec60709b90938da0a88020c30972423fc4e632276&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
+{#                                    <div class="wprt-spacer" data-desktop="80" data-mobi="60" data-smobi="60"></div>#}
+{#                                    <div id="gmap" class="wprt-gmap"></div>#}
+{#                                    <div class="wprt-spacer" data-desktop="50" data-mobi="40" data-smobi="40"></div>#}
+                                </div><!-- /.col-md-12 -->
+
+                                <div class="col-md-4">
+                                    <div class="wprt-information">
+                                        <h4 class="margin-bottom-15">ПРЯМАЯ СВЯЗЬ</h4>
+                                        <p></p>
+                                        <ul class="style-2">
+                                            <li class="address">
+                                                <span class="hl">Адрес: </span>
+                                                <span class="text">{{ company_address }}</span>
+                                            </li>
+                                            <li class="phone">
+                                                <span class="hl">Телефон: </span>
+                                                <span class="text">{{ company_tel }}</span>
+                                            </li>
+                                            <li class="email">
+                                                <span class="hl">E-mail: </span>
+                                                <span class="text"><a href="mailto:{{ company_email }}">{{ company_email }}</a></span>
+                                            </li>
+                                        </ul>
+                                    </div><!-- /.wprt-information -->
+
+                                    <div class="wprt-spacer" data-desktop="0" data-mobi="30" data-smobi="30"></div>
+                                </div><!-- /.col-md-4 -->
+
+			                    <div class="col-md-8">
+			                    	<h4 class="margin-bottom-15">ФОРМА ОБРАТНОЙ СВЯЗИ</h4>
+									<form action="./includes/contact/contact-process.php" method="post" class="contact-form wpcf7-form">
+										<div class="wprt-contact-form-1">
+											<span class="wpcf7-form-control-wrap name">
+												<input type="text" tabindex="1" id="name" name="name" value="" class="wpcf7-form-control" placeholder="Имя *" required>
+											</span>
+											<span class="wpcf7-form-control-wrap email">
+												<input type="email" tabindex="2" id="email" name="email" value="" class="wpcf7-form-control" placeholder="E-mail *" required>
+											</span>
+											<span class="wpcf7-form-control-wrap phone">
+												<input type="text" tabindex="3" id="phone" name="phone" value="" class="wpcf7-form-control" placeholder="Телефон">
+											</span>
+											<span class="wpcf7-form-control-wrap subject">
+												<input type="text" tabindex="4" id="subject" name="subject" value="" class="wpcf7-form-control" placeholder="Тема *" required>
+											</span>
+											<span class="wpcf7-form-control-wrap message">
+												<textarea id="message" name="message" tabindex="5" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" placeholder="Сообщние *" required></textarea>
+											</span>
+											<div class="wrap-submit">
+												<input type="submit" value="ОТПРАВИТЬ" class="submit wpcf7-form-control wpcf7-submit" id="submit" name="submit">
+											</div>
+										</div>
+									</form>
+			                    </div><!-- /.col-md-8 -->
+
+                                <div class="col-md-12">
+                                    <div class="wprt-spacer" data-desktop="80" data-mobi="60" data-smobi="60"></div>
+                                </div><!-- /.col-md-12 -->
+                            </div><!-- /.row -->
+                        </div><!-- /.container -->
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block script %}
+
+{#    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBswyJLpoKXqeHRPwvUFx_CtXJkK3DD9Js&callback=initMap"></script>#}
+
+{#    <script type="text/javascript" src="{% static 'js/gmap3.min.js' %}"></script>#}
+
+    <script>
+        $('.menu_compet').on('click', function () {
+            window.location.href = '/compet/';
+        });
+        $('.menu_projects').on('click', function () {
+            window.location.href = '/projects/';
+        });
+        $('.menu_why_us').on('click', function () {
+            window.location.href = '/why_us/';
+        });
+        $('.menu_directions').on('click', function () {
+            window.location.href = '/directions/';
+        });
+
+        $('#submit').on('click', function (e) {
+            e.preventDefault();
+            var data = new FormData();
+            data.append('name', $('#name').val());
+            data.append('email', $('#email').val());
+            data.append('subject', $('#subject').val());
+            data.append('message', $('#message').val());
+            data.append('phone', $('#phone').val());
+            data.append('csrfmiddlewaretoken', '{{ csrf_token }}');
+
+                $.ajax({
+                    url: '{% url 'dash_panel:del_foto_from_gallery' %}',
+                    type: 'POST',
+                    data: data,
+                    processData: false,
+                    contentType: false,
+                    error: function(data){
+                        swal({
+                            title: 'Ошибка сервера',
+                            text: 'Возникла ошибка при сохранении. Попробуйте позже.',
+                            type: 'warning'
+                        });
+                    },
+                    success:function (data) {
+                        swal({
+                            title: 'Информация обнавлена',
+                            text: 'Изображения удалены',
+                            type: 'success',
+                            confirmButtonColor: '#3085d6',
+                            confirmButtonText: 'Ок',
+                            closeOnConfirm: true,
+                        },
+                        function (isConfirm) {
+                            if (isConfirm){
+                                $('.main-foto').remove();
+                                $('.preview-foto').remove();
+                                $('.big-foto').remove();
+                                $('#dropzone').removeClass('display-none');
+                            }
+
+                        });
+
+                    }
+                });
+
+        });
+
+    </script>
+
+
+{% endblock %}

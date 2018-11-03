@@ -1,0 +1,29 @@
+.btn-corner-fixed{
+    position: fixed;
+    right: 30px;
+    bottom:30px;
+}
+
+.font-size-20-imp{
+    font-size: 20px!important;
+}
+
+.display-none{
+    display: none;
+}
+
+.cursor-pointer{
+    cursor: pointer!important;
+}
+
+.padding-15{
+    padding: 15px;
+}
+
+.margin-20-imp{
+    margin: 20px!important;
+}
+
+display-none{
+    display: none;
+}

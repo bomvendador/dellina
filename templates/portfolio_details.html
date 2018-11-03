@@ -1,0 +1,144 @@
+{% extends 'base_fixed_header.html' %}
+{% load staticfiles %}
+
+
+{% block main_content %}
+
+<!-- Featured Title -->
+<div id="featured-title" class="clearfix featured-title-left margin-top-100">
+    <div id="featured-title-inner height-90" class="container clearfix">
+        <div class="featured-title-inner-wrap padding-20-imp">
+            <div class="featured-title-heading-wrap">
+                <h1 class="featured-title-heading ">{{ portfolio_item.short_name }}</h1>
+            </div>
+            <div id="breadcrumbs">
+                <div class="breadcrumbs-inner">
+                    <div class="breadcrumb-trail">
+                        <a href="{% url 'index' %}" title="Construction" rel="home" class="trail-begin">Домой</a>
+                        <span class="sep">/</span>
+                        <span class="trail-end">Детали проекта</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div id="main-content" class="site-main clearfix">
+    <div id="content-wrap">
+        <div id="site-content" class="site-content clearfix">
+            <div id="inner-content" class="inner-content-wrap">
+                <div class="page-content">
+                    <section class="wprt-section">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="wprt-spacer" data-desktop="80" data-mobi="60" data-smobi="60"></div>
+                                </div><!-- /.col-md-12 -->
+
+                                <div class="col-md-8">
+                                    <div class="wprt-galleries galleries w-770px" data-width="142" data-margin="15">
+                                        <div id="wprt-slider" class="flexslider">
+                                            <ul class="slides">
+                                                {% for image in images_big %}
+                                                <li class="flex-active-slide">
+                                                    <a class="zoom" href="{% static 'images' %}/{{ image.image }}"><i class="fa fa-arrows-alt"></i></a>
+                                                    <img src="{% static 'images' %}/{{ image.image }}" alt="image" />
+                                                </li>
+                                                {% endfor %}
+{#                                                <li class="flex-active-slide">#}
+{#                                                    <a class="zoom" href="assets/img/gallery/p-2.jpg"><i class="fa fa-arrows-alt"></i></a>#}
+{#                                                    <img src="assets/img/gallery/p-2.jpg" alt="image" />#}
+{#                                                </li>#}
+{##}
+{#                                                <li class="flex-active-slide">#}
+{#                                                    <a class="zoom" href="assets/img/gallery/p-3.jpg"><i class="fa fa-arrows-alt"></i></a>#}
+{#                                                    <img src="assets/img/gallery/p-3.jpg" alt="image" />#}
+{#                                                </li>#}
+{##}
+{#                                                <li class="flex-active-slide">#}
+{#                                                    <a class="zoom" href="assets/img/gallery/p-1.jpg"><i class="fa fa-arrows-alt"></i></a>#}
+{#                                                    <img src="assets/img/gallery/p-1.jpg" alt="image" />#}
+{#                                                </li>#}
+{#                                                <li class="flex-active-slide">#}
+{#                                                    <a class="zoom" href="assets/img/gallery/p-2.jpg"><i class="fa fa-arrows-alt"></i></a>#}
+{#                                                    <img src="assets/img/gallery/p-2.jpg" alt="image" />#}
+{#                                                </li>#}
+                                            </ul>
+                                        </div>
+
+                                        <div id="wprt-carousel" class="flexslider">
+                                            <ul class="slides">
+                                                {% for image in images_small %}
+                                                <li><img src="{% static 'images' %}/{{ image.image }}" alt="image"></li>
+                                                {% endfor %}
+{#                                                <li><img src="assets/img/gallery/p-2-s.jpg" alt="image"></li>#}
+{#                                                <li><img src="assets/img/gallery/p-3-s.jpg" alt="image"></li>#}
+{#                                                <li><img src="assets/img/gallery/p-1-s.jpg" alt="image"></li>#}
+{#                                                <li><img src="assets/img/gallery/p-2-s.jpg" alt="image"></li>#}
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div><!-- /.col-md-8 -->
+
+                                <div class="col-md-4">
+                                    <div class="wprt-spacer" data-desktop="0" data-mobi="40" data-smobi="40"></div>
+
+                                    <h3 class="line-height-normal margin-bottom-10">Данные проекта</h3>
+                                    <div class="wprt-lines style-1 custom-3">
+                                        <div class="line-1"></div>
+                                        <div class="line-2"></div>
+                                    </div>
+
+                                    <div class="wprt-spacer" data-desktop="25" data-mobi="25" data-smobi="25"></div>
+
+                                    <p>{{ portfolio_item.name }}</p>
+{#                                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque nec erat erat. Integer blandit nulla quis fermentum hendrerit.</p>#}
+
+                                    <div class="wprt-lines style-1 custom-4">
+                                        <div class="line-1"></div>
+                                    </div>
+
+                                    <ul class="wprt-list style-2 accent-color margin-top-30 margin-bottom-25">
+                                        <li><strong>Заказчик:</strong> {{ portfolio_item.client }}</li>
+                                        <li><strong>Период:</strong> {{ portfolio_item.period }}</li>
+                                        <li><strong>Сумма контрактов:</strong> {{ portfolio_item.sum }}</li>
+                                        <li><strong>Объем работ:</strong> {{  portfolio_item.vol }}</li>
+                                    </ul>
+
+{#                                    <a href="#" class="wprt-button small rounded-3px">LIVE PREVIEW</a>#}
+                                </div><!-- /.col-md-4 -->
+
+                                <div class="col-md-12">
+                                    <div class="wprt-spacer" data-desktop="80" data-mobi="60" data-smobi="60"></div>
+                                </div><!-- /.col-md-12 -->
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block script %}
+    <script>
+        $('.menu_compet').on('click', function () {
+            window.location.href = '/compet/';
+        });
+        $('.menu_projects').on('click', function () {
+            window.location.href = '/projects/';
+        });
+        $('.menu_why_us').on('click', function () {
+            window.location.href = '/why_us/';
+        });
+        $('.menu_directions').on('click', function () {
+            window.location.href = '/directions/';
+        });
+
+    </script>
+
+{% endblock %}

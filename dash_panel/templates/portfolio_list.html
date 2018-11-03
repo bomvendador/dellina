@@ -1,0 +1,123 @@
+{% extends 'base_dash_panel.html' %}
+
+{% load staticfiles %}
+
+
+
+{% block links %}
+
+{#    <link href="{% static 'admin_panel/bower_components/bootstrap/dist/css/' %}" rel="stylesheet" type="text/css"/>#}
+    <link href="{% static 'admin_panel/bower_components/switchery/dist/switchery.min.css' %}" rel="stylesheet" type="text/css"/>
+    <link href="{% static 'admin_panel/bower_components/datatables/media/css/jquery.dataTables.min.css' %}" rel="stylesheet" type="text/css"/>
+
+
+{% endblock %}
+
+{% block content %}
+		<div class="page-wrapper">
+			<div class="container-fluid">
+
+				<!-- Title -->
+				<div class="row heading-bg">
+					<div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+					  <h5 class="txt-dark">Портфолио</h5>
+					</div>
+					<!-- Breadcrumb -->
+					<div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+					  <ol class="breadcrumb">
+						<li><a href="index.html">Dashboard</a></li>
+						<li><a href="#"><span>table</span></a></li>
+						<li class="active"><span>data-table</span></li>
+					  </ol>
+					</div>
+					<!-- /Breadcrumb -->
+				</div>
+				<!-- /Title -->
+
+				<!-- Row -->
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="panel panel-default card-view">
+							<div class="panel-heading">
+								<div class="pull-left">
+									<h6 class="panel-title txt-dark">Список проектов</h6>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+							<div class="panel-wrapper collapse in">
+								<div class="panel-body">
+									<div class="table-wrap">
+										<div class="table-responsive">
+											<table id="datable_1" class="table table-hover display  pb-30" >
+												<thead>
+													<tr>
+														<th>Заказчик</th>
+														<th>Период</th>
+														<th>Объект</th>
+														<th>Сумма</th>
+														<th>Объем</th>
+													</tr>
+												</thead>
+												<tfoot>
+													<tr>
+														<th>Заказчик</th>
+														<th>Период</th>
+														<th>Объект</th>
+														<th>Сумма</th>
+														<th>Объем</th>
+													</tr>
+												</tfoot>
+												<tbody>
+                                                {% for item in portfolio_list %}
+													<tr id="{{ item.id }}" class="item cursor-pointer">
+														<td>{{ item.client}}</td>
+														<td>{{ item.period }}</td>
+														<td>{{ item.name }}</td>
+														<td>{{ item.sum }}</td>
+														<td>{{ item.vol }}</td>
+													</tr>
+                                                {% endfor %}
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /Row -->
+
+			</div>
+
+			<!-- Footer -->
+			<footer class="footer container-fluid pl-30 pr-30">
+				<div class="row">
+					<div class="col-sm-12">
+						<p>2018 &copy; Winkle. Pampered by Hencework</p>
+					</div>
+				</div>
+			</footer>
+			<!-- /Footer -->
+
+		</div>
+		<!-- /Main Content -->
+
+{% endblock %}
+{% block script %}
+
+    <script src="{% static 'admin_panel/bower_components/bootstrap-select/dist/js/bootstrap-select.min.js' %}"></script>
+    <script src="{% static 'admin_panel/bower_components/select2/dist/js/select2.full.min.js' %}"></script>
+    <script src="{% static 'admin_panel/bower_components/switchery/dist/switchery.min.js' %}"></script>
+    <script src="{% static 'admin_panel/bower_components/datatables/media/js/jquery.dataTables.min.js' %}"></script>
+    <script src="{% static 'admin_panel/js/form-advance-data.js' %}"></script>
+
+
+    <script>
+        $('.item').on('click', function () {
+            window.location.href = '/dash_panel/portfolio_item_details/' + $(this).prop('id');
+        });
+
+    </script>
+
+{% endblock %}
