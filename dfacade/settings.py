@@ -87,16 +87,16 @@ WSGI_APPLICATION = 'dfacade.wsgi.application'
 #     }
 # }
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'dellina',
-        'USER': 'debian-sys-maint',
-        'PASSWORD': 'alexrodin',
-        'HOST': 'localhost',
-        'PORT': '',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'dellina',
+#         'USER': 'debian-sys-maint',
+#         'PASSWORD': 'alexrodin',
+#         'HOST': 'localhost',
+#         'PORT': '',
+#     }
+# }
 
 
 # Password validation
