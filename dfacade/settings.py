@@ -29,7 +29,7 @@ SECRET_KEY = '5^cci0$p(f5l^q3v@m$9%y8=3&cb*8g5d&r@$ah5)kuf1=)1+7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['dellina.ru', '134.0.112.113']
 
 
 # Application definition
