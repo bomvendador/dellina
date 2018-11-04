@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 
 import os
 
-PHONE_NUMBER = '+7 (495) zzz-56-01'
+PHONE_NUMBER = '+7 (495) 748-56-01'
 CONTACT_EMAIL = 'info@dellina.ru'
 ADDRESS = 'г. Москва, ул. Крутицкий Вал, 14'
 
