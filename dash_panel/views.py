@@ -94,6 +94,7 @@ def add_portfolio_item(request):
         for file_key in request.FILES.keys():
             print('fk' + str(file_key))
             for file in request.FILES.getlist(file_key):
+                print('file_name = ' + str(file.name.encode('utf-8')))
                 if image_num == 1:
                     # item_img = PortfolioItemImages()
                     # item_img.image = file
