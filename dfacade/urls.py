@@ -22,7 +22,7 @@ from django.conf.urls.static import static
 from django.conf import settings
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    # path('admin/', admin.site.urls),
     url(r'^$', views.index_view, name="index"),
     url(r'portfolio_details/(?P<project_id>\d+)/$', views.portfolio_details_view, name="portfolio_details"),
     url(r'contacts/', views.contacts, name="contacts"),
