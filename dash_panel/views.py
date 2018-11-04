@@ -95,10 +95,10 @@ def add_portfolio_item(request):
             print('fk' + str(file_key))
             for file in request.FILES.getlist(file_key):
                 if image_num == 1:
-                    item_img = PortfolioItemImages()
-                    item_img.image = file
-                    item_img.item = item
-                    item_img.save()
+                    # item_img = PortfolioItemImages()
+                    # item_img.image = file
+                    # item_img.item = item
+                    # item_img.save()
                     item.main_image = file
                     item.save()
                 elif image_num == 2 or image_num == 4 or image_num == 6 or image_num == 8:

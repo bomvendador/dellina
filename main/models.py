@@ -31,7 +31,7 @@ class PortfolioItem(models.Model):
     period = models.CharField(max_length=200, null=True, blank=True)
     sum = models.CharField(max_length=20, null=True, blank=True)
     vol = models.CharField(max_length=20, null=True, blank=True)
-    main_image = models.CharField(max_length=200, null=True, blank=True)
+    main_image = models.ImageField(upload_to='portfolio/', null=True, blank=True)
 
 
 class PortfolioItemImages(models.Model):

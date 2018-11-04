@@ -22,8 +22,7 @@ def index_view(request):
         'company_tel': settings.PHONE_NUMBER,
         'company_email': settings.CONTACT_EMAIL,
         'company_address': settings.ADDRESS,
-        'portfolio_items': portfolio_items
-
+        'portfolio_items': portfolio_items,
     }
     return render(request, 'main_index.html', context)
 
@@ -59,7 +58,7 @@ def send_email(request, template, from_, to, context):
     return HttpResponse()
 
 
-def message_from_site (request):
+def message_from_site(request):
     if request.method == 'POST':
         data = request.POST
         name_ = data.get('name')
