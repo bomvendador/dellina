@@ -30,7 +30,8 @@ urlpatterns = [
     url(r'projects/', views.goto_project, name="goto_projects"),
     url(r'why_us/', views.goto_why_us, name="goto_why_us"),
     url(r'directions/', views.goto_directions, name="goto_directions"),
-    url(r'dash_panel/', include('dash_panel.urls'))
+    url(r'dash_panel/', include('dash_panel.urls')),
+    url(r'site_message/', views.message_from_site, name="site_message")
     # url(r'^cart_for_checkout/(?P<cart_id>\d+)/$', main_view.cart_for_checkout, name='cart_for_checkout'),
 
 ]

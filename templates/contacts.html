@@ -133,7 +133,7 @@
             data.append('csrfmiddlewaretoken', '{{ csrf_token }}');
 
                 $.ajax({
-                    url: '{% url 'dash_panel:del_foto_from_gallery' %}',
+                    url: '{% url 'site_message' %}',
                     type: 'POST',
                     data: data,
                     processData: false,
