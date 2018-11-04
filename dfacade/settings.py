@@ -137,7 +137,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, '/main/static_global/')
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'dfacade/main/static')
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'main/static'),
