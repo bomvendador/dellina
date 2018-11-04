@@ -30,10 +30,10 @@ def index_view(request):
 def portfolio_details_view(request, project_id):
     portfolio_item = PortfolioItem.objects.get(id=project_id)
     images_big = PortfolioItemImagesBig.objects.filter(item=portfolio_item)
-    images_small = PortfolioItemImagesSmall.objects.filter(item=portfolio_item)
+    # images_small = PortfolioItemImagesSmall.objects.filter(item=portfolio_item)
     context = company_info()
     context.update({
-        'images_small': images_small,
+        # 'images_small': images_small,
         'images_big': images_big,
         'portfolio_item': portfolio_item
     })
