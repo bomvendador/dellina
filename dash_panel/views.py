@@ -145,12 +145,10 @@ def portfolio_item_details(request, project_id):
     portfolio_item = PortfolioItem.objects.get(id=project_id)
     images_big = PortfolioItemImagesBig.objects.filter(item=portfolio_item)
     images_small = PortfolioItemImagesSmall.objects.filter(item=portfolio_item)
-    image_main = PortfolioItemImages.objects.get(item=portfolio_item)
     context = {
         'portfolio_item': portfolio_item,
         'images_big': images_big,
         'images_small': images_small,
-        'image_main': image_main
     }
     return render(request, 'portfolio_item_details.html', context)
 
