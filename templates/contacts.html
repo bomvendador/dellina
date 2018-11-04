@@ -133,9 +133,7 @@
             data.append('phone', $('#phone').val());
             data.append('csrfmiddlewaretoken', '{{ csrf_token }}');
 
-            alertify.alert("This is an alert dialog.", function(){
-                alertify.message('OK');
-            });
+            alertify.success('Success message');
 
 {#                $.ajax({#}
 {#                    url: '{% url 'site_message' %}',#}
