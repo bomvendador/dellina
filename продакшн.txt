@@ -1,0 +1,21 @@
+установить Git.exe
+sudo apt-get update
+sudo apt-get install python3-pip python3-dev libpq-dev nginx
+apt-get install python-virtualenv
+virtualenv venv
+source venv/bin/activate
+sudo apt-get build-dep python-mysqldb
+pip install mysql-python
+
+pip install django
+pip install django-cors-headers
+pip install django-imagekit
+
+работа с гитом
+sudo apt-get install git-core
+git clone https://github.com/bomvendador/catering.git
+
+git pull origin master
+
+убить процессы на порту
+fuser -k -n tcp 8000
