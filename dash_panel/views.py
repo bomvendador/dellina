@@ -14,7 +14,7 @@ def dash_panel_login_view(request):
     return render(request, 'login.html', context)
 
 
-# @login_required(redirect_field_name=None, login_url='/dash_panel')
+@login_required(redirect_field_name=None, login_url='/dash_panel')
 def dash_panel_index_view(request):
     if request.method == 'POST':
         login_ = request.POST['login']
@@ -156,7 +156,7 @@ def del_foto_from_gallery(request):
         data = request.POST
         project_id = data.get('project_id')
         item = PortfolioItem.objects.get(id=project_id)
-        PortfolioItemImagesSmall.objects.filter(item=item).delete()
+        PortfolioItemImages.objects.filter(item=item).delete()
         PortfolioItemImagesBig.objects.filter(item=item).delete()
         item.main_image = ''
         item.save()
