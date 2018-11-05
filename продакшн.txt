@@ -19,3 +19,69 @@ git pull origin master
 
 убить процессы на порту
 fuser -k -n tcp 8000
+
+для работы static file
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+
+urlpatterns += staticfiles_urlpatterns() + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+nginx config
+server {
+    listen       80;
+#    server_name  134.0.112.113;
+
+#    root /home/dellina/main/static;
+    #charset koi8-r;
+    #access_log  /var/log/nginx/host.access.log  main;
+    
+    location = /favicon.ico { access_log off; log_not_found off; }
+    location /static/ {
+	autoindex on;
+        root /home/dellina/main;
+    }
+
+    location / {
+#        include proxy_params;
+        proxy_pass http://unix:/home/dellina/dellina.sock;
+    }
+
+#    location / {
+ #       root   /usr/share/nginx/html;
+  #      index  index.html index.htm;
+   # }
+
+    #error_page  404              /404.html;
+
+    # redirect server error pages to the static page /50x.html
+    #
+    error_page   500 502 503 504  /50x.html;
+    location = /50x.html {
+        root   /usr/share/nginx/html;
+    }
+
+    # proxy the PHP scripts to Apache listening on 127.0.0.1:80
+    #
+    #location ~ \.php$ {
+    #    proxy_pass   http://127.0.0.1;
+    #}
+
+    # pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
+    #
+    #location ~ \.php$ {
+    #    root           html;
+    #    fastcgi_pass   127.0.0.1:9000;
+    #    fastcgi_index  index.php;
+    #    fastcgi_param  SCRIPT_FILENAME  /scripts$fastcgi_script_name;
+    #    include        fastcgi_params;
+    #}
+
+    # deny access to .htaccess files, if Apache's document root
+    # concurs with nginx's one
+    #
+    #location ~ /\.ht {
+    #    deny  all;
+    #}
+}
+
+#include /etc/nginx/sites-enabled/*;
+
