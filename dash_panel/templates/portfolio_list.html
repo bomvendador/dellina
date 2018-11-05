@@ -66,7 +66,7 @@
 														<th>Объект</th>
 														<th>Сумма</th>
 														<th>Объем</th>
-														<th><i class="ti-close"></i></th>
+														<th></th>
 													</tr>
 												</tfoot>
 												<tbody>
@@ -77,6 +77,7 @@
 														<td>{{ item.name }}</td>
 														<td>{{ item.sum }}</td>
 														<td>{{ item.vol }}</td>
+														<td<i class="ti-close cursor-pointer" id="{{ item.id }}"></i>></td>
 													</tr>
                                                 {% endfor %}
 												</tbody>
