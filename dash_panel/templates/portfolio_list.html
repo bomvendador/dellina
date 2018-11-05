@@ -126,7 +126,7 @@
             data.append('csrfmiddlewaretoken', '{{ csrf_token }}');
 
                 $.ajax({
-                    url: '{% url 'dash_panel:del_portfolio_item' %}',
+                    url: '{% url 'dash_panel:del_foto_from_gallery' %}',
                     type: 'POST',
                     data: data,
                     processData: false,
