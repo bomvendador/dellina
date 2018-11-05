@@ -336,7 +336,7 @@
                                                             <img src="{% static 'images' %}/{{ item.main_image }}" alt="image"/>
                                                             <figcaption>
                                                                 <div>
-                                                                    <h2><a href="{% url 'portfolio_details' item.id %}">{{ item.client }}</a></h2>
+                                                                    <h2><a href="{% url 'portfolio_details' item.id %}">{{ item.short_name }}</a></h2>
                                                                     <p>{{ item.sum }}</p>
                                                                 </div>
                                                             </figcaption>
