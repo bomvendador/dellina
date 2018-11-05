@@ -162,3 +162,13 @@ def del_foto_from_gallery(request):
         item.save()
         return HttpResponse('ok')
 
+
+def del_portfolio_item(request):
+    if request.method == 'POST':
+        data = request.POST
+        project_id = data.get('project_id')
+        item = PortfolioItem.objects.get(id=project_id)
+        PortfolioItemImagesBig.objects.filter(item=item).delete()
+        item.delete()
+        return HttpResponse('ok')
+

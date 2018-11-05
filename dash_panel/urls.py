@@ -17,6 +17,7 @@ urlpatterns = [
     url(r'^portfolio_item_details/(?P<project_id>\d+)/$', views_dash_panel.portfolio_item_details, name="portfolio_item_details"),
     url(r'^portfolio_list/$', views_dash_panel.portfolio_list, name="portfolio_list"),
     url(r'^del_fotos_from_galley/$', views_dash_panel.del_foto_from_gallery, name="del_foto_from_gallery"),
+    url(r'^del_portfolio_item/$', views_dash_panel.del_portfolio_item, name="del_portfolio_item"),
 ]
 
 # if settings.DEBUG:
