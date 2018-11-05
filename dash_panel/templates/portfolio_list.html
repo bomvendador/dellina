@@ -113,12 +113,13 @@
     <script src="{% static 'admin_panel/bower_components/select2/dist/js/select2.full.min.js' %}"></script>
     <script src="{% static 'admin_panel/bower_components/switchery/dist/switchery.min.js' %}"></script>
     <script src="{% static 'admin_panel/bower_components/datatables/media/js/jquery.dataTables.min.js' %}"></script>
-    <script src="{% static 'admin_panel/js/form-advance-data.js' %}"></script>
+{#    <script src="{% static 'admin_panel/js/form-advance-data.js' %}"></script>#}
 
 
     <script>
 
         $('.ti-close').on('click', function (e) {
+            console.log('ti closw');
             var id = $(this).prop('id');
             e.preventDefault();
             var data = new FormData();
