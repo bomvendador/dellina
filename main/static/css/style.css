@@ -1206,6 +1206,7 @@ body.page #main-content { padding-top: 0; padding-bottom: 0; }
 }
 
 @media only screen and (max-width: 991px) {
+    .hide-item-990{ display: none }
 	.font-size-25 { font-size: 18px; }
 	.font-size-30 { font-size: 20px; }
 	.font-size-35 { font-size: 26px; }
