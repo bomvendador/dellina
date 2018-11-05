@@ -57,6 +57,7 @@
 														<th>Сумма</th>
 														<th>Объем</th>
 														<th></th>
+														<th></th>
 													</tr>
 												</thead>
 												<tfoot>
@@ -67,17 +68,19 @@
 														<th>Сумма</th>
 														<th>Объем</th>
 														<th></th>
+														<th></th>
 													</tr>
 												</tfoot>
 												<tbody>
                                                 {% for item in portfolio_list %}
-													<tr id="{{ item.id }}" class="item cursor-pointer">
+													<tr class="item cursor-pointer">
 														<td>{{ item.client}}</td>
 														<td>{{ item.period }}</td>
 														<td>{{ item.name }}</td>
 														<td>{{ item.sum }}</td>
 														<td>{{ item.vol }}</td>
 														<td><i class="ti-close cursor-pointer" id="{{ item.id }}"></i></td>
+														<td><i class="ti-pencil cursor-pointer" id="{{ item.id }}"></i></td>
 													</tr>
                                                 {% endfor %}
 												</tbody>
@@ -161,7 +164,7 @@
 
         });
 
-        $('.item').on('click', function () {
+        $('.ti-pencil').on('click', function () {
             window.location.href = '/dash_panel/portfolio_item_details/' + $(this).prop('id');
         });
 
