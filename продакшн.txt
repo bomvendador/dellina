@@ -85,3 +85,5 @@ server {
 
 #include /etc/nginx/sites-enabled/*;
 
+максимальный размер файла (nginx)
+client_max_body_size 32m;
