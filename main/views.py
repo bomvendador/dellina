@@ -68,7 +68,7 @@ def message_from_site(request):
         subject = data.get('subject')
         email_context = {'name': name_, 'email': email, 'phone': phone, 'message': message, 'subject': subject}
 
-        send_email(request, 'site_message', 'info@dellina.ru', ['site@dellina.ru'], email_context)
+        send_email(request, 'site_message', 'post@dellina.ru', ['site@dellina.ru'], email_context)
         return HttpResponse()
 
 
