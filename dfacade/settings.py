@@ -14,7 +14,7 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 import os
 
 PHONE_NUMBER = '+7 (495) 748-56-01'
-CONTACT_EMAIL = 'info@dellina.ru'
+CONTACT_EMAIL = 'post@dellina.ru'
 ADDRESS = 'г. Москва, ул. Крутицкий Вал, 14'
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -149,8 +149,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'main/static/images')
 
 EMAIL_HOST = 'mail.dellina.ru'
 EMAIL_PORT = 25
-EMAIL_HOST_USER = 'info@dellina.ru'
-EMAIL_HOST_PASSWORD = 'A7j4C7q7'
+EMAIL_HOST_USER = 'post@dellina.ru'
+EMAIL_HOST_PASSWORD = '9O1g7Z8j'
 
 TEMPLATED_EMAIL_BACKEND = 'templated_email.backends.vanilla_django.TemplateBackend'
 TEMPLATED_EMAIL_TEMPLATE_DIR = 'email/'
