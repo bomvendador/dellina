@@ -39,6 +39,11 @@ def dash_panel_index_view(request):
     return render(request, 'base_dash_panel.html')
 
 
+@login_required(redirect_field_name=None, login_url='/dash_panel')
+def dash_panel_index_view_(request):
+    return render(request, 'base_dash_panel.html')
+
+
 def check_login(request):
 
     context = {}
