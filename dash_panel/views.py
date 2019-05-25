@@ -8,7 +8,7 @@ from django.contrib.auth import authenticate, login, logout
 
 
 def dash_panel_login_view(request):
-
+    logout(request)
     context = {
     }
     return render(request, 'login.html', context)
