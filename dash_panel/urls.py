@@ -11,6 +11,7 @@ app_name = 'dash_panel'
 urlpatterns = [
     url(r'^$', views_dash_panel.dash_panel_login_view, name="dash_panel_login"),
     url(r'^index/$', views_dash_panel.dash_panel_index_view_, name="dash_panel_index_"),
+    url(r'^login/$', views_dash_panel.dash_panel_index_view, name="dash_panel_login"),
     # url(r'^check_login/$', views_dash_panel.check_login, name="dash_panel_check_login"),
     url(r'^add_user/$', views_dash_panel.add_user, name="add_user"),
     url(r'^add_portfolio_item/$', views_dash_panel.add_portfolio_item, name="add_portfolio_item"),
