@@ -36,7 +36,7 @@ def dash_panel_index_view(request):
 
     context = {}
     print("dfsdfsdfsdf")
-    return render(request, 'base_dash_panel.html', context)
+    return render(request, 'base_dash_panel.html')
 
 
 def check_login(request):
